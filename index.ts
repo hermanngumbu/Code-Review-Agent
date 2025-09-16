@@ -1,0 +1,11 @@
+import { generateText } from "ai";
+// Import de google module from "@ai-sdk/google"
+import { google } from "@ai-sdk/google";
+
+// Specify the model to use for generative text and a prompt
+const  { text } = await generateText({
+    model : google("models/gemini-2.5-flash"),
+    prompt : "What is an AI agent",
+});
+
+console.log(text)
